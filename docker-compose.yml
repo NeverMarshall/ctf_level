@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  level1_hidden_file:
+    build: ./level1_hidden_file
+    container_name: level1_hidden_file
+    ports:
+      - "2221:22"
+
+  level2_locked_dir:
+    build: ./level2_locked_dir
+    container_name: level2_locked_dir
+    ports:
+      - "2222:22"
+
+  level3_simple_get:
+    build: ./level3_simple_get
+    container_name: level3_simple_get
+    ports:
+      - "8001:8001"
+
+  level4_path_traversal:
+    build: ./level4_path_traversal
+    container_name: level4_path_traversal
+    ports:
+      - "8004:8004"
+  level5_capabilities:
+    build: ./level5_capabilities
+    container_name: level5_capabilities
+    ports:
+      - "2223:22"
+
+  level6_blind_sql:
+    build: ./level6_blind_sql
+    container_name: level6_blind_sql
+    ports:
+      - "8006:8006"
