@@ -13,17 +13,19 @@ services:
     ports:
       - "2222:22"
 
-  level3_simple_get:
-    build: ./level3_simple_get
-    container_name: level3_simple_get
+  level3_nginx:
+    build: ./level3_nginx
+    container_name: level3_nginx
     ports:
       - "8001:8001"
+    restart: unless-stopped
 
   level4_path_traversal:
     build: ./level4_path_traversal
     container_name: level4_path_traversal
     ports:
       - "8004:8004"
+
   level5_capabilities:
     build: ./level5_capabilities
     container_name: level5_capabilities
